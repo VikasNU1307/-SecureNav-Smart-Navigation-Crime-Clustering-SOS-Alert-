@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+   <link rel="stylesheet" href="/css/login.css">
+   <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+          <div class="logo"><a href="/">SafeRoute</a></div>
+          
+         
+          </div>
+        </div>
+      </nav>
+    <div class="wrapper login">
+        <div class="container">
+            <div class="col-left">
+                <div class="login-text">
+                    <h2>Welcome!</h2>
+                    <p>Create your account.<br>For Free!</p> <a href="/signup" class="btn">Sign Up</a>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="login-form">
+                    <h2>Login</h2>
+                    <form action="" onsubmit="login(event)">
+                        <p> <label>Username/Email address<span>*</span></label> <input type="text"
+                                placeholder="Username or Email" id="email" required> </p>
+                        <p> <label>Password<span>*</span></label> <input type="password" placeholder="Password"
+                                id="password" required> </p>
+                        <button type="submit" id="Log">Login</button>
+                        <p> <a href="">Forgot password?</a> </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src = "/js/switcher.js"></script>
+    
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+        
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAOB9l2bh9dTD0MRxi0A9QOZWckIPQFuoE",
+            authDomain: "saferoute-407318.firebaseapp.com",
+            databaseURL: "https://saferoute-407318-default-rtdb.firebaseio.com",
+            projectId: "saferoute-407318",
+            storageBucket: "saferoute-407318.appspot.com",
+            messagingSenderId: "167829110927",
+            appId: "1:167829110927:web:f2d860dbb885bf6d0bb0fa",
+            measurementId: "G-TSZ3X00PWY"
+        };
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // Get form input elements
+        var email = document.getElementById('email');
+        var password = document.getElementById('password');
+
+        window.login = function (e) {
+            e.preventDefault();
+            var obj = {
+                email: email.value,
+                password: password.value,
+            };
+
+            signInWithEmailAndPassword(auth, obj.email, obj.password)
+                .then(function (success) {
+                    alert("logined Successfully");
+                    var aaaa = (success.user.uid);
+                    localStorage.setItem("uid", aaaa);
+                    console.log(aaaa);
+
+                    window.location.replace('/Home');
+                })
+                .catch(function (err) {
+                    // alert("login error" + err);
+                    alert("Sorry, the email or password you entered is incorrect. Please double-check your information and try again.");
+                });
+
+            console.log(obj);
+        }
+    </script>
+</body>
+
+</html>

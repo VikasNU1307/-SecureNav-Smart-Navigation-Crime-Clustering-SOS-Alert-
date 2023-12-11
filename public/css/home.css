@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       :root{
+  --white: #fff;
+  --black: #242526;
+  --nav-main:#1ABC9C;
+  --switchers-main: #2A6F31;
+  --light-bg: #DAF1DC;
+}
+       nav{
+  position:relative;
+  height: 70px;
+  width: 100%;
+  background: var(--nav-main);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  margin-bottom:10px;
+}
+       nav .navbar{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 30px;
+  justify-content: space-between;
+ 
+}
+nav .navbar a{
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--white);
+  text-decoration: none;
+}
+.navbar .nav-links{
+   display: flex;
+ }
+ .navbar .nav-links li{
+   margin: 0 8px;
+   list-style: none;
+   display: flex;
+ }
+ .navbar .nav-links a{
+   font-size: 18px;
+   font-weight: 400;
+   opacity: 1;
+ }
+ .navbar .nav-links a:hover{
+    opacity: 1;
+  }
+  .navbar .appearance{
+   display: flex;
+   align-items: center;
+ }
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+ }
+ 
+ header {
+   height: 86vh;
+   width: 100%;
+   background: url("https://firebasestorage.googleapis.com/v0/b/saferoute-407318.appspot.com/o/background.png?alt=media&token=825ee010-66d0-4e84-ab78-aff0e1c85540") no-repeat;
+   background-position: center;
+   position: relative;
+   padding-top: 10px;
+   margin-bottom: 20px; /* Adjusted margin from the top */
+ }
+ 
+ ::selection {
+   background: #a3f5ec;
+ }
+ 
+ .text-content {
+   position: absolute;
+   top: 33%;
+   left: 7%;
+   z-index: 12;
+ }
+ 
+ header .text-content .text {
+   font-size: 27px;
+   color: #2c3350;
+ }
+ 
+ header .text-content .name {
+   color: #2c3350;
+   font-size: 65px;
+   font-weight: 600;
+   margin: -20px 0 0 -3px;
+ }
+ 
+ header .text-content .job {
+   color: #2c3350;
+   font-size: 40px;
+   margin: 5px 0;
+   margin-top: -4px;
+   display: flex;
+ }
+ 
+ .text-content .typing-text {
+   margin-left: 10px;
+   overflow: hidden;
+   white-space: nowrap;
+   border-right: 4px solid #1de2d1;
+   animation: typing 5s steps(15) infinite;
+ }
+ 
+ @keyframes typing {
+   0% {
+     width: 0ch;
+   }
+   50% {
+     width: 15ch;
+   }
+   100% {
+     width: 0ch;
+   }
+ }
+ 
+ .text-content .job .one {
+   color: #1de2d1;
+ }
+ 
+ .text-content .job .two {
+   color: #1de2d1;
+ }
+ 
+ .buttons {
+   margin: 20px 0 0 50px;
+ }
+ 
+ .text-content .buttons button {
+   outline: none;
+   margin: 0 10px;
+   border: none;
+   border-radius: 6px;
+   font-size: 18px;
+   color: #fff;
+   padding: 8px 16px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background-image: linear-gradient(135deg, #2AFADF 10%, #C346C2 100%);
+ }
+ 
+ .buttons button:hover {
+   transform: scale(0.97);
+ }
+ 
+ .content .girl img {
+   position: absolute;
+   height: 95%;
+   bottom: 0;
+   right: 80px;
+   position: absolute;
+   border-radius: 8%;
+ }
+ 
+
+ 
+ #map {
+     /* Adjust the padding-top to set the desired gap */
+    height: 90%;
+    width: 90%; /* Adjust the width as needed */
+    margin: auto; /* Center the map horizontally */
+}
+/* .divider{
+  background-color:red;
+  height:30px;
+  width:100%;
+  margin-bottom:50px;
+} */
+
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .controls {
+        margin-top: 10px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      #origin-input,
+      #destination-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 200px;
+      }
+
+      #origin-input:focus,
+      #destination-input:focus {
+        border-color: #3A9943;
+      }
+
+      #mode-selector {
+        color: #fff;
+        background-color: #1ABC9C;
+        margin-left: 12px;
+        padding: 5px 11px 0px 11px;
+      }
+
+      #mode-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+      li{
+      	font-family: georgia;
+      }
+      
+
+    

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    background-color: #DAF1DC;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .signup-box {
+    width: 360px;
+    height: 620px;
+    margin: auto;
+    background-color: white;
+    border-radius: 3px;
+  }
+
+  h1 {
+    font-family: Poppins;
+    text-align: center;
+    padding-top: 15px;
+    color:#1ABC9C;
+  }
+
+  h4 {
+    
+    text-align: center;
+  }
+
+  form {
+    width: 300px;
+    margin-left: 20px;
+  }
+
+  form label {
+    font-family: Poppins;
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+    color:#1ABC9C;
+  }
+
+  form input {
+    
+          display: block;
+          width: 100%;
+          height: 35px;
+          padding: 0 10px;
+          outline: none;
+          border: 1px solid #cccccc;
+          border-radius: 30px;
+     
+  }
+
+  .signup-button {
+    display: inline-block;
+          width: 100%;
+          margin-top: 5px;
+          color: #2aa15f;
+          font-size: 16px;
+          letter-spacing: 1px;
+          cursor: pointer;
+          background: transparent;
+          border: 1px solid #2aa15f;
+          border-radius: 30px;
+          box-shadow: inset 0 0 0 0 #1ABC9C;
+          transition: .3s;
+  }
+.signup-button:hover {
+          color: #ffffff;
+          box-shadow: inset 310px 0 0 0 #1ABC9C;
+      }
+  p {
+    font-family: Poppins;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+  }
+
+  .para-2 {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-top: -10px;
+  }
+
+  .para-2 a {
+    color: #49c1a2;
+  }
+  .login-here{
+    margin-left:14%;
+  }
